@@ -90,4 +90,5 @@ def handle_new_message(data):
     socketio.emit('message_update', data)
 
 if __name__ == '__main__':
-    socketio.run(app, debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    socketio.run(app, host='0.0.0.0', port=port)
