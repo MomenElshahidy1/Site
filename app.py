@@ -13,6 +13,9 @@ from datetime import timedelta
 import os
 from dotenv import load_dotenv
 
+import eventlet
+eventlet.monkey_patch()
+
 # Load environment variables
 load_dotenv()
 
